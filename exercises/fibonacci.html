@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reto 4: Fibonacci</title>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(135deg, #f2f2f2, #e6e6e6);
+        }
+
+        .container {
+            display: flex;
+            width: 80%;
+            max-width: 1000px;
+            height: 80%;
+            background: #ffffff;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .form-container {
+            width: 35%;
+            padding: 20px;
+            border-right: 2px solid #e0e0e0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .result-container {
+            width: 65%;
+            padding: 20px;
+            overflow-y: auto;
+            background: #f9f9f9;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        h1 {
+            font-size: 28px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        input[type="number"] {
+            width: 80%;
+            padding: 15px;
+            font-size: 16px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
+
+        button {
+            width: 80%;
+            padding: 15px;
+            font-size: 16px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        .result-container p {
+            font-size: 18px;
+            line-height: 1.5;
+            color: #333;
+            margin: 5px 0;
+            background: #ffffff;
+            border-radius: 5px;
+            padding: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="form-container">
+        <h1>Secuencia de Fibonacci</h1>
+        <form id="fibonacciForm">
+            <label for="input">Ingrese el número:</label>
+            <input type="number" id="input" min="1" oninput="limitInputLength(this)" required>
+            <button type="button" onclick="generateFibonacci()">Generar</button>
+            <br><br>
+            <button type="button" onclick="window.location.href='../index.html';">Ir al menú</button>
+        </form>
+    </div>
+    <div class="result-container">
+        <h2>Resultado</h2>
+        <pre id="resultPre"></pre>
+        <pre id="resultPre2"></pre>
+        <pre id="result"></pre>
+    </div>
+</div>
+
+
+<script src="../js/fibonacci.js"></script>
+</body>
+</html>
